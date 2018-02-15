@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MyCountryListViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    MyCountryListViewController *VC = [[MyCountryListViewController alloc]init];
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:VC];
+    self.window.rootViewController = navController;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
